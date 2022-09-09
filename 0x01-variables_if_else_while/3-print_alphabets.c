@@ -16,5 +16,5 @@ int main(void)
 	while (alpha_upper != ('Z' + 1))
 		putchar(alpha_upper++);
 	putchar('\n');
-	return (0);	       
+	return (0);
 }
