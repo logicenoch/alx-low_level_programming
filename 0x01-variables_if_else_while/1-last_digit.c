@@ -4,7 +4,7 @@
 /**
  * main - main function
  * Description: Last digit comparison
- * return: 0
+ * Return: 0
  */
 int main(void)
 {
