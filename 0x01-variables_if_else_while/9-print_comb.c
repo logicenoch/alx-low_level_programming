@@ -16,7 +16,7 @@ int main(void)
 		{
 			putchar(numeric_alpha);
 		}
-		putchar(',')
+		putchar(',');
 	}
 	putchar('\n');
 	return (0);
