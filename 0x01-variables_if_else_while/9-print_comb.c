@@ -10,14 +10,14 @@ int main(void)
 
 	for (numeric_alpha = '0'; numeric_alpha <= '9'; numeric_alpha++)
 	{
+
+		putchar(numeric_alpha);
 		if (numeric_alpha != '9')
 		{
-			putchar(numeric_alpha);
 			putchar(',');
 			putchar(' ');
 		}
-		else
-			putchar(numeric_alpha);
+		putchar('\n');
 	}
 	return (0);
 }
