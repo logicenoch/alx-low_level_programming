@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	char numeric_alpha = '0';
+	int numeric_alpha = '0';
 
 	for (numeric_alpha = '0'; numeric_alpha <= '9'; numeric_alpha++)
 	{
