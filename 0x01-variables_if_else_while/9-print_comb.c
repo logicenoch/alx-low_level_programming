@@ -15,8 +15,8 @@ int main(void)
 			putchar(numeric_alpha);
 			putchar(' ');
 			putchar(',');
-		}
-		putchar(numeric_alpha);
+		}else
+			putchar(numeric_alpha);
 	}
 	return (0);
 }
