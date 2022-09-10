@@ -13,9 +13,10 @@ int main(void)
 		if (numeric_alpha != '9')
 		{
 			putchar(numeric_alpha);
-			putchar(' ');
 			putchar(',');
-		}else
+			putchar(' ');
+		}
+		else
 			putchar(numeric_alpha);
 	}
 	return (0);
