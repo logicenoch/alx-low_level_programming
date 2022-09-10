@@ -13,7 +13,7 @@ int main(void)
 		if (numeric_alpha != '9')
 		{
 			putchar(numeric_alpha);
-			putchar(',');
+			putchar(' ');
 			putchar(',');
 		}
 		putchar(numeric_alpha);
