@@ -1,15 +1,15 @@
 #include "main.h"
 /**
  * main - main function
- * Description - Prints the string "putchar"
+ * Description: Prints the string "putchar"
  * return: 0
  */
 int main(void)
 {
 	char *str = "_putchar";
-	int i;
+	int i = 0;
 
-	while (i < 8)
+	while (i < 9)
 	{
 		_putchar(str[i]);
 		i++;
