@@ -4,7 +4,7 @@
  * Description: Checks if the input is a lower case character
  * Return: 1 if true, otherwise 0 is returned
  */
-void _islower(int c)
+int _islower(int c)
 {	
 	if (c >= 'a' && c <= 'z')
 		return (1);
