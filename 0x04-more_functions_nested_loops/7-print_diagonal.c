@@ -1,19 +1,33 @@
-#include "main.h"
+#include "holberton.h"
+
 /**
-*function_name: print_diagonal - entry point of the function
-*Description: Draws a diagonal line
-*@n: Determines the length of the diagonal
-*/
+ * print_diagonal - Draws a diagonal line according to parameter
+ *
+ * @n: The of time to print diagonal lines
+ *
+ * Return: void
+ */
+
 void print_diagonal(int n)
 {
-	int counter = 0;
+	int a, b;
 
 	if (n <= 0)
+	{
 		_putchar('\n');
+	}
 	else
 	{
-		while (counter < n)
-			_putchar('\\');
-		_putchar('\n');
+		for (a = 0; a < n; a++)
+		{
+			for (b = 0; b < a; b++)
+			{
+				_putchar(32);
+
+			}
+
+			_putchar(92);
+			_putchar('\n');
+		}
 	}
 }
