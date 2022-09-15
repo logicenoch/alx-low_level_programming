@@ -21,4 +21,5 @@ int main(void)
 			printf("%d ", counter);
 	}
 	putchar('\n');
+	return (0);
 }
