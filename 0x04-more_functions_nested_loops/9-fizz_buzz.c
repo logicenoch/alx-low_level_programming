@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 /**
 *function_name: main - entry point of the program
