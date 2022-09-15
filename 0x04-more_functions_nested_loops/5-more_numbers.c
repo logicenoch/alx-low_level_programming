@@ -15,7 +15,7 @@ void more_numbers(void)
 			c1++;
 			if (j >= 9)
 			{
-				c1 = '1'
+				c1 = '1';
 				while (j < 14)
 				{
 					_putchar(c1 + (c2++));
