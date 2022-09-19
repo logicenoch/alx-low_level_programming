@@ -2,7 +2,7 @@
 /**
  *rev_string -  reverses a string
  *Description: Resverses its input
- *@str:input string
+ *@s:input string
  *Return: void
  */
 void rev_string(char *s)
@@ -11,6 +11,6 @@ void rev_string(char *s)
 	char *s2;
 	strcpy(s2, s);
 
-	for (len = strlen(str); len != 0; len--)
+	for (len = strlen(s); len != 0; len--)
 		s[index++] = str[len];
 }
