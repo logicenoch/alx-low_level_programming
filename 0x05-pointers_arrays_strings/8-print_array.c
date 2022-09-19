@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  *print_array - unfolds an array
  *Description: Print the content of an array
