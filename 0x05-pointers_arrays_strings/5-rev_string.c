@@ -5,11 +5,12 @@
  *@str:input string
  *Return: void
  */
-void rev_string(char *str)
+void rev_string(char *s)
 {
-	int len = strlen(str), index;
-	char s[len] = "";
+	int len = strlen(str), index = 0;
+	char *s2;
+	strcpy(s2, s);
 
-	for (len = strlen(str), index = 0; len != 0 index < len; len--, index++)
-		s[index] = str[len];
+	for (len = strlen(str); len != 0 index; len--)
+		s[index++] = str[len];
 }
