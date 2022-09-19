@@ -7,8 +7,8 @@
  */
 void rev_string(char *str)
 {
-	int len = strlen(str);
-	char s[len];
+	int len = strlen(str), index;
+	char s[len] = "";
 
 	for (len = strlen(str), index = 0; len != 0 index < len; len--, index++)
 		s[index] = str[len];
