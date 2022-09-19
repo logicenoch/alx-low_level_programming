@@ -12,5 +12,5 @@ void rev_string(char *s)
 	strcpy(s2, s);
 
 	for (len = strlen(s); len != 0; len--)
-		s[index++] = str[len];
+		s[index++] = s2[len];
 }
