@@ -1,57 +1,64 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
- *isLower - Checks if the input is a lowercase character.
- *@c: input character to test.
- *Return: 1 if true, and 0 if false.
+ * isLower - Determines whether ascii is lowercase
+ *
+ * @c: Character
+ *
+ * Return: 1 if true, 0 if false
  */
+
 int isLower(char c)
 {
-	return (c >= 'a' && c <= 'z');
+	return (c >= 97 && c <= 122);
 }
 
-
 /**
- * isSeparator - checks if the input is a separator
- * @c: input character to test
- * Return: 1 if true, and 0 if false.
+ * isDelimiter - Determines whether ascii is a delimiter
+ *
+ * @c: Character
+ *
+ * Return: 1 if true, 0 if false
  */
-int isSeparator(char c)
-{
-	int i = 0;
-	char *sep = "\t\n,;.!?\"(){}";
 
-	while (sep[i] != '\0')
-	{
-		if (c == sep[i])
+int isDelimiter(char c)
+{
+	int i;
+	char delimiter[] = " \t\n,.!?\"(){}";
+
+	for (i = 0; i < 12; i++)
+		if (c == delimiter[i])
 			return (1);
-		i++;
-	}
 
 	return (0);
 }
 
-
 /**
- * cap_string - Capitalizes all the words in a string
+ * cap_string - Capitalizes all words of a string
+ *
  * @s: Input string
- * Return: the capitalized string
+ *
+ * Return: string with capitalized words
  */
+
 char *cap_string(char *s)
 {
-	int Flag = 1;
+	char *ptr = s;
+	int foundDelimit = 1;
 
 	while (*s)
 	{
-		if (isSeparator(*s))
-			Flag = 1;
-		else if (isLower(*s) && Flag)
+		if (isDelimiter(*s))
+			foundDelimit = 1;
+		else if (isLower(*s) && foundDelimit)
 		{
-			*s -= ' ';
-			Flag = 0;
-		} else
-			Flag = 0;
+			*s -= 32;
+			foundDelimit = 0;
+		}
+		else
+			foundDelimit = 0;
 		s++;
 	}
-	return (s);
+	return (ptr);
 }
