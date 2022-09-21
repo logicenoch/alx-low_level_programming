@@ -12,8 +12,19 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int s1_len = strlen(s1);
-	int s2_len = strlen(s2);
+	int diff = 0;
+	int index = 0;
 
-	return (s1_len - s2_len);
+	while (s1[i])
+	{
+	
+		if(s1[index] != s2[i])
+		{
+			diff = ((s1[index] - '\0') - (s2[index] - '\0'));
+			break;
+		}
+		index++;
+	}
+
+	return (diff);
 }
