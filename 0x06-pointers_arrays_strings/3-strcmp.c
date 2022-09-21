@@ -15,7 +15,7 @@ int _strcmp(char *s1, char *s2)
 	int diff = 0;
 	int index = 0;
 
-	while (s1[i])
+	while (s1[index])
 	{
 	
 		if(s1[index] != s2[index])
