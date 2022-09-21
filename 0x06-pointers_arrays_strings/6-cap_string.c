@@ -5,7 +5,7 @@
  *@c: input character to test.
  *Return: 1 if true, and 0 if false.
  */
-int isLower (char c)
+int isLower(char c)
 {
 	return (c >= 'a' && c <= 'z');
 }
@@ -18,7 +18,7 @@ int isLower (char c)
  */
 int isSeparator(char c)
 {
-	char *sep = "\t\n,.!?\"(){}";
+	char *sep = "\t\n,;.!?\"(){}";
 
 	while (*sep)
 		if (c == *sep++)
