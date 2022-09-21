@@ -5,7 +5,7 @@
  *@c: input character to test.
  *Return: 1 if true, and 0 if false.
  */
-int isLower (char c)
+int isLower(char c)
 {
 	return (c >= 'a' && c <= 'z');
 }
