@@ -5,7 +5,7 @@
  *@c: input character to test.
  *Return: 1 if true, and 0 if false.
  */
-int isLower(char c)
+int isLower (char c)
 {
 	return (c >= 'a' && c <= 'z');
 }
@@ -18,11 +18,10 @@ int isLower(char c)
  */
 int isSeparator(char c)
 {
-	int str_idx;
-	char *sep = "\t\n,;.!?\"(){}";
+	char *sep = "\t\n,.!?\"(){}";
 
-	for (str_idx = 0; str_idx < strlen(sep); str_idx++)
-		if (c == sep[str_idx])
+	while (*sep)
+		if (c == *sep++)
 			return (1);
 
 	return (0);
@@ -44,7 +43,7 @@ char *cap_string(char *s)
 			Flag = 1;
 		else if (isLower(*s) && Flag)
 		{
-			*s -= 32;
+			*s -= ' ';
 			Flag = 0;
 		} else
 			Flag = 0;
