@@ -44,7 +44,7 @@ char *cap_string(char *s)
 			Flag = 1;
 		else if (isLower(*s) && Flag)
 		{
-			*s -= ' ';
+			*s -= 32;
 			Flag = 0;
 		} else
 			Flag = 0;
