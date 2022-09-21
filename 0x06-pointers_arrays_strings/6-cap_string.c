@@ -18,10 +18,11 @@ int isLower(char c)
  */
 int isSeparator(char c)
 {
+	int str_index;
 	char *sep = "\t\n,;.!?\"(){}";
 
-	while (*sep)
-		if (c == *sep++)
+	for (str_index = 0; str_index < strlen(sep); str_index++)
+		if (c == sep[str_index])
 			return (1);
 
 	return (0);
