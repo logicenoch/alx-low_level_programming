@@ -17,8 +17,8 @@ int _strcmp(char *s1, char *s2)
 
 	while (s1[index])
 	{
-	
-		if(s1[index] != s2[index])
+
+		if (s1[index] != s2[index]
 		{
 			diff = ((s1[index] - '\0') - (s2[index] - '\0'));
 			break;
