@@ -2,10 +2,10 @@
 #include "main.h"
 
 /**
- * *_strchr - fills memory with a constant byte.
- * @s: pointer to put the constant
- * @c: constant
- * Return: s
+ * *_strchr - finds the first occurrence of the character c in the string s.
+ * @s: the string
+ * @c: character to find
+ * Return: the first occurrence of @c
  */
 
 char *_strchr(char *s, char c)
