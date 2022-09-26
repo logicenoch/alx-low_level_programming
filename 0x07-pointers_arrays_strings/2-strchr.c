@@ -12,7 +12,7 @@ char *_strchr(char *s, char c)
 {
 	unsigned int index = 0;
 
-	while (s[index])
+	while (s[index] != '\0')
 	{
 		if (s[index] == c)
 			return (s + index);
