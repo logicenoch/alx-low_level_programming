@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * _pow_recursion - Prints the power of a number using recursion.
