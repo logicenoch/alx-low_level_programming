@@ -8,18 +8,18 @@
 
 char *_strdup(char *str)
 {
-	int len = strlen(str), i;
+	int len = strlen(str) + 1, i;
 	char *strptr;
 
 	if (str == NULL)
 		return (NULL);
 
-	strptr = (char *)malloc((len + 1) * sizeof(char));
+	strptr = (char *)malloc((len * sizeof(*s));
 
 	if (strptr == NULL)
 		return (NULL);
 
-	for (i = 0; i < len; i++)
+	for (i = 0; i < len - 1; i++)
 		strptr[i] = str[i];
 
 	return (strptr);
