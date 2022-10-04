@@ -22,7 +22,7 @@ char *str_concat(char *s1, char *s2)
 
 	concat = malloc(concat_len * sizeof(*s1));
 
-	while (s1 != '\0')
+	while (*s1 != '\0')
 	{
 		concat[flag] = s1[flag];
 		flag++;
