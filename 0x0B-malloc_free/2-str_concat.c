@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-*_str_concat - Joins two strings together
+*str_concat - Joins two strings together
 *@s1: string 1
 *@s2: string 2
 *Return: pointer to the joined strings
@@ -22,6 +22,9 @@ char *str_concat(char *s1, char *s2)
 	concat_len = s1_len + s2_len;
 
 	concat = malloc(concat_len * sizeof(*s1) + 1);
+
+	if (concat == NULL)
+		return NULL;
 
 	for (flag = 0; flag < concat_len; flag++)
 	{
