@@ -1,4 +1,4 @@
-@include "main.h"
+#include "main.h"
 /**
  * *argstostr - concatenates the arguments of the command line
  * @ac: command line arguments count
