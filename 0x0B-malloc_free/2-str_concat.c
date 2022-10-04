@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
-*_strdup - returns a pointer to copy of str.
-*@str: size of the array
-*Return: pointer to the copy of str
+*_str_concat - Joins two strings together
+*@s1: string 1
+*@s2: string 2
+*Return: pointer to the joined strings
 */
 
 char *str_concat(char *s1, char *s2)
@@ -12,24 +13,25 @@ char *str_concat(char *s1, char *s2)
 	char *concat;
 
 	if (s1 == NULL)
-		s1 = "";
+		s1 = "\0";
 	if (s2 == NULL)
-		s2 = "";
+		s2 = "\0";
 
 	s1_len = strlen(s1);
 	s2_len = strlen(s2);
-	concat_len = s1_len + s2_len + 1;
+	concat_len = s1_len + s2_len;
 
-	concat = malloc(concat_len * sizeof(*s1));
+	concat = malloc(concat_len * sizeof(*s1) + 1);
 
-	while (*s1 != '\0')
+	for (flag = 0; i < concat_len; flag++)
 	{
-		concat[flag] = s1[flag];
-		flag++;
+		if (flag < s1_len)
+			concat[flag] = s1[flag];
+		else
+			concat[flag] = s2[flag - s1_len];
 	}
 
-	for (i = flag; i <= concat_len; i++)
-		concat[i] = s2[i];
+	concat[flag] = '\0';
 
 	return (concat);
 }
