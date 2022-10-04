@@ -25,7 +25,7 @@ if (concat_arg == NULL)
 for (i = 0; i < ac; i++)
 {
 	for (j = 0; av[i][j] != '\0'; j++, cmpt++)
-		s[cmpt] = av[i][j];
+		concat_arg[cmpt] = av[i][j];
 
 	concat_arg[cmpt] = '\n';
 	cmpt++;
