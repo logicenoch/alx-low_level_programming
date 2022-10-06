@@ -7,8 +7,8 @@
  *Return: 0 if successful, -1 otherwise
  */
 
- int main(int argc, char **argv)
- {
+int main(int argc, char **argv)
+{
 	int num1, num2;
 	if (argc != 3)
 	{
@@ -27,4 +27,4 @@
 		exit (98);
 	}
 	return num1 * num2;
- }
+}
