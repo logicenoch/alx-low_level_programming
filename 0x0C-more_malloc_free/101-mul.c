@@ -1,7 +1,6 @@
 #include "main.h"
 /**
- *array_range - reallocates a memory block
- *@main: Houses a program that multiplies through CML
+ * main - Houses a program that multiplies through CML
  *@argc: argument count
  *@argv: arrays of arguments
  *Return: 0 if successful, -1 otherwise
@@ -13,7 +12,7 @@ int main(int argc, char **argv)
 	if (argc != 3)
 	{
 		printf("Error\n");
-		exit (98);
+		exit(98);
 	}
 
 	if (atoi(argv[1]) && atoi(argv[2]))
@@ -24,7 +23,7 @@ int main(int argc, char **argv)
 	}else
 	{
 		printf("Error\n");
-		exit (98);
+		exit(98);
 	}
-	return num1 * num2;
+	return (num1 * num2);
 }
