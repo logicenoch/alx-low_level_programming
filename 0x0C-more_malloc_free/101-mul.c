@@ -28,5 +28,4 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 	return (num1 * num2);
-	
 }
