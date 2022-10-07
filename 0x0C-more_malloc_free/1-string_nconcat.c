@@ -1,43 +1,52 @@
 #include "main.h"
-#include <string.h>
 
 /**
- *string_nconcat - concatenates two strings.
- *@s1: Destination string
- *@s2: Source string
- *@n: n bytes of s2
- *Return: concaatenated string if successful or NULL
+ * _strlen - find length of a string
+ * @s: string
+ * Return: int
+ */
+
+unsigned int _strlen(char *s)
+{
+unsigned int size = 0;
+for (; s[size] != '\0'; size++)
+;
+return (size);
+}
+
+/**
+ * *string_nconcat - concatenates two strings
+ * @s1: string 1
+ * @s2: string 2
+ * @n: first bytes of s2 to be used
+ * Return: pointer or NULL
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *final;
-	unsigned int s1_len = strlen(s1), s2_len = strlen(s2), final_len;
-	unsigned int i, j, k = 0;
+unsigned int i, j;
+char *m;
 
-	if (s1 == NULL)
-		s1 = "";
+if (s1 == NULL)
+	s1 = "";
+if (s2 == NULL)
+	s2 = "";
 
-	if (s2 == NULL)
-		s2 = "";
+if (n < _strlen(s2))
+	m = malloc(_strlen(s1) + n * sizeof(char) + 1);
+else
+	m = malloc(_strlen(s1) + _strlen(s2) + 1);
 
-	if (s2_len >= n)
-		s2_len = n;
+if (m == 0)
+	return (NULL);
 
-	final_len = s1_len + s2_len;
-	final = malloc(sizeof(char) * (final_len + 1));
+for (i = 0; s1[i] != '\0'; i++)
+	m[i] = s1[i];
 
-	if (final == NULL)
-		return (NULL);
+for (j = 0; s2[j] != '\0' && j < n; i++, j++)
+	m[i] = s2[j];
 
-	for (i = 0; i < s1_len; i++)
-		final[k++] = s1[i];
+m[i] = '\0';
 
-	for (j = 0; j < s2_len; j++)
-		final[k++] = s2[j];
-
-	final[k + 1] = '\0';
-	return (final);
-
+return (m);
 }
-
