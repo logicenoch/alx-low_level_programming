@@ -24,6 +24,7 @@ int _strlen(char *s)
 		;
 	return (i);
 }
+
 /**
  *xarray - creates an array and initializes its value to x plus terminating
  *null byte
@@ -47,6 +48,7 @@ char *xarray(int size)
 	arr[i] = '\0';
 	return (arr);
 }
+
 /**
  *_zero_iteration - iterates thru a given no. of zeroes
  *
@@ -61,6 +63,7 @@ char *_zero_iteration(char *s)
 	}
 	return (s);
 }
+
 /**
  *convert_to_digit - converts digit character to int
  *
@@ -80,6 +83,7 @@ int convert_to_digit(char s)
 	}
 	return (digit);
 }
+
 /**
  *_product - multiplies string of numbers by a single digit
  *
@@ -126,6 +130,7 @@ void _product(char *prod, char *mul, int digit, int zeroes)
 		*prod = (tens % 10) + '0';
 	}
 }
+
 /**
  *nums_add - adds numbers stored in two strings
  *
@@ -171,6 +176,7 @@ void nums_add(char *final_prod, char *next_prod, int next_len)
 		*final_prod = (tens % 10) + '0';
 	}
 }
+
 /**
  *main - multiplies two positive numbers and prints the result
  *
