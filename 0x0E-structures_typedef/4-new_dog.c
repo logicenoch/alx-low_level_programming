@@ -8,7 +8,7 @@
  *Return: dog_t object
  */
 
-void init_dog(char *name, float age, char *owner)
+void new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_dog;
 
