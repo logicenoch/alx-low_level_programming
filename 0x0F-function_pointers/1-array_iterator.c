@@ -1,3 +1,4 @@
+#include "function_pointers.h"
 /**
  *array_iterator - executes a function passed to it
  *@array: array passed as an arg
@@ -13,6 +14,6 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 		return;
 	for (counter = 0; counter < size; counter++)
 	{
-		(*action)(array[i]);
+		(*action)(array[counter]);
 	}
 }
