@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	if (!strcmp(oprt, "%") || !strcmp(oprt, "/"))
+	if (!strcmp(argv[2], "%") || !strcmp(argv[2], "/"))
 		if (atoi(argv[3]) == 0)
 		{
 			printf("Error\n");
