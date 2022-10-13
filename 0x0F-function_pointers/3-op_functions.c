@@ -1,3 +1,5 @@
+include "3-calc.h"
+
 /**
  *op_add - adds a to b.
  *@a: num1.
@@ -41,6 +43,7 @@ int op_div(int a, int b)
 {
 	return (a / b);
 }
+
 /**
  * op_mod - calcuates the modules when @a divides @b.
  * @a: dividend

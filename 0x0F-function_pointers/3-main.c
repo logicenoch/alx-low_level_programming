@@ -1,4 +1,4 @@
-#include "function_pointers.h"
+#include "3-calc.h"
 /**
  *main - main function of our program.
  *@argc: argument count.
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	if (oprt == "%" || oprt == "/")
+	if (!strcmp(oprt, "%") || !strcmp(oprt, "/"))
 		if (atoi(argv[3]) == 0)
 		{
 			printf("Error\n");
