@@ -1,5 +1,4 @@
 #include "function_pointers.h"
-#include <stdio.h>
 /**
  *main - main function of our program.
  *@argc: argument count.
@@ -29,6 +28,6 @@ int main(int argc, char *argv[])
 			printf("Error\n");
 			exit(100);
 		}
-	printf("%d\n", oprt(atoi(argv[1]), atoi(argv[3]));
+	printf("%d\n", oprt(atoi(argv[1]), atoi(argv[3])));
 		return (0);
 }
